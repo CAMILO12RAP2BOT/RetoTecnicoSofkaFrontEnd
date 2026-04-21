@@ -22,7 +22,7 @@ Este proyecto automatiza casos de prueba para la aplicación Open Cart Abstracta
 ## Estructura del Proyecto
 
 ```
-RetoTecnicoChoucair/
+RetoTecnicoSofka/
 ├── src/
 │   ├── main/java/com/sofka/             # Código fuente principal
 │   │   ├── models/                      # Modelos de datos
