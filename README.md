@@ -1,4 +1,4 @@
-# Reto Técnico Choucair - Open Cart Abstracta
+# Reto Técnico Sofka - Open Cart Abstracta
 
 Proyecto de automatización de pruebas de aplicaciones web utilizando **Screenplay Pattern** con **Serenity BDD** y **Selenium**.
 
