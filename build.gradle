@@ -1,0 +1,58 @@
+plugins {
+    id 'java'
+    id("net.serenity-bdd.serenity-gradle-plugin") version "5.3.9"
+}
+
+group = 'com.sofka.reto'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    serenityVersion = '4.3.4'
+}
+
+dependencies {
+    testImplementation "net.serenity-bdd:serenity-core:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-cucumber:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay-rest:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-junit:${serenityVersion}"
+    implementation "io.rest-assured:rest-assured:5.4.0"
+    
+
+    implementation("io.github.bonigarcia:webdrivermanager:6.3.3")
+    testImplementation "org.seleniumhq.selenium:selenium-java:4.15.0"
+    
+
+    testImplementation "org.hamcrest:hamcrest:2.2"
+    testImplementation "org.assertj:assertj-core:3.24.1"
+    
+
+    implementation "com.github.javafaker:javafaker:1.0.2"
+    testImplementation "com.opencsv:opencsv:5.9"
+    
+
+    testImplementation 'org.slf4j:slf4j-simple:2.0.7'
+    testImplementation 'org.apache.logging.log4j:log4j-core:2.21.0'
+    
+
+    testImplementation "com.google.code.gson:gson:2.10.1"
+    testImplementation 'junit:junit:4.13.2'
+
+
+}
+
+test {
+    maxHeapSize = "2048m"
+    testLogging.showStandardStreams = true
+    systemProperties System.getProperties()
+    
+    // Configuración de Serenity para paquete com.sofka
+    systemProperties = [
+        'serenity.test.root': 'com.sofka.stepdefinitions'
+    ]
+}
