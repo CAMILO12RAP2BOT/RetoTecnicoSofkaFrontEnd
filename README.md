@@ -54,7 +54,7 @@ RetoTecnicoChoucair/
 Para ejecutar el suite completo de pruebas, solo debes ejecutar **MasterRunner**:
 
 ```bash
-./gradlew clean test --tests MasterRunner
+./gradlew clean test --tests MasterRunner aggregate
 ```
 
 **En Windows (PowerShell):**
